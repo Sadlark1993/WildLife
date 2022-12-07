@@ -1,0 +1,136 @@
+/* reset------------------ */
+ul{
+    list-style: none;
+}
+
+img{
+    display:block;
+    max-width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+	padding: 0px;
+	margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* resetEnd ------------------- */
+
+
+/* Header--- */
+.menu{
+    height: 80px;
+    background: #FEC63E;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu>.logo img{
+    width: 56px;
+    height: 45px;
+}
+
+.menu>.logo a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    font-family: 'Gochi Hand', 'Times New Roman', Times, serif;
+    font-size: 2.14em;
+}
+
+.menu nav{
+    display: flex;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    font-size: 1.14em;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li a{
+    padding: 10px;
+}
+
+
+/* Apresentacao */
+
+.slide-wrap{
+    overflow: hidden;
+}
+
+.slide-wrap>.imagens{
+    display: block;
+
+}
+
+.slide-wrap>.imagens li{
+    width:fit-content;
+    flex-shrink: 0;
+    display: none;
+    transition: 0.3s;
+}
+
+.slide-wrap>.imagens li.active{
+    display: block;
+}
+
+.apresentacao .texto{
+    position: relative;
+    top: -360px;
+    color: white;
+    font-family: 'Patrick Hand SC', cursive;
+    margin-left: 130px;
+}
+
+.apresentacao .texto h1{
+    font-size: 5.5em;
+    text-shadow: 2px 2px black;
+}
+
+.apresentacao span{
+    font-size: 1.5em;
+    margin-left: 140px;
+    text-shadow: 1px 1px black;
+}
+
+.apresentacao .custom-control{
+    display: flex;
+    position:relative;
+    margin: 0 auto;
+    width: 140px;
+    justify-content: space-around;
+    top: -25px;
+}
+
+.apresentacao .custom-control>li{
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #FEC63E;
+    opacity: 0.6;
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+.apresentacao .custom-control>li.active,
+.apresentacao .custom-control>li:hover
+{
+    opacity: 1;
+    transform: scale(1);
+}
