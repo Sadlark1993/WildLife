@@ -80,16 +80,32 @@ a{
 .slide-wrap>.imagens li{
     width:fit-content;
     flex-shrink: 0;
-    display: none;
-    transition: 0.3s;
+    animation: fade 0.5s forwards;
+    display: block;
+    position:absolute;
+    z-index: -2;
 }
+
+.slide-wrap>.imagens li:last-child{
+    display: block;
+    position: static;
+    float:left;
+}
+
+/* .slide-wrap>.imagens::after, .slide-wrap>.imagens::before{
+    content: '';
+    display: table;
+    clear: both;
+} */
 
 .slide-wrap>.imagens li.active{
     display: block;
+    animation: appear 0.5s forwards;
 }
 
 .apresentacao .texto{
     position: relative;
+    z-index: 10;
     top: -360px;
     color: white;
     font-family: 'Patrick Hand SC', cursive;
@@ -104,7 +120,7 @@ a{
 .apresentacao span{
     font-size: 1.5em;
     margin-left: 140px;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px black;
 }
 
 .apresentacao .custom-control{
@@ -114,6 +130,7 @@ a{
     width: 140px;
     justify-content: space-around;
     top: -25px;
+    cursor:pointer;
 }
 
 .apresentacao .custom-control>li{
@@ -133,4 +150,22 @@ a{
 {
     opacity: 1;
     transform: scale(1);
+}
+
+@keyframes appear{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@keyframes fade{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
