@@ -1,8 +1,25 @@
 //Ficar mudando a imagem de apresentacao do site
 
+const onResize = function(){
+    apTexto.style.height = `${presImg[0].offsetHeight}px`;
+    apTexto.style.padding = `${presImg[0].offsetHeight/2}px 0 0 0`;
+}
+
 const presImg = document.querySelectorAll('.slide-wrap .imagens li');
+//console.log(presImg);
 
 const cControl = document.querySelectorAll('.slide-wrap .custom-control li');
+//console.log(cControl);
+
+const apTexto = document.querySelector('.container.present-content');
+console.log(presImg[0].offsetHeight);
+console.log(presImg[0].offsetHeight/2);
+
+
+apTexto.style.height = `${presImg[0].offsetHeight}px`;
+apTexto.style.padding = `${presImg[0].offsetHeight/2}px 0 0 0`;
+
+window.addEventListener('resize', onResize)
 
 //funcao que vai mudando a imagem da apresentacao toda vez q for chamada.
 let i = 0;
