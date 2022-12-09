@@ -179,12 +179,12 @@ div{
 
 @keyframes appear{
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 @keyframes fade{
     from {
@@ -192,5 +192,58 @@ div{
     }
     to {
         opacity: 0;
+    }
+}
+
+.hobbie h1{
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2.5em;
+}
+
+.hobbie h1::after{
+    display: block;
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    margin: 8px auto;
+}
+
+.listaBtn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.listaBtn>li{
+    box-sizing: border-box;
+    /* border: 5px solid black; */
+    max-width: 210px;
+    overflow: hidden;
+    cursor: pointer;
+    animation: borderColorB 0.4s forwards;
+}
+
+.listaBtn>li:hover{
+    animation: borderColorA 0.4s forwards; 
+}
+
+@keyframes borderColorB{
+    from {
+        border: 5px solid #FEC63E;
+    }
+    to {
+        border: 5px solid black;
+    }
+}
+
+@keyframes borderColorA{
+    from {
+        border: 5px solid black;
+    }
+    to {
+        border: 5px solid #FEC63E;
     }
 }
