@@ -1,4 +1,4 @@
-//Ficar mudando a imagem de apresentacao do site
+//Ficar mudando a imagem de apresentacao do site**************
 
 const onResize = function(){
     apTexto.style.height = `${presImg[0].offsetHeight}px`;
@@ -12,8 +12,8 @@ const cControl = document.querySelectorAll('.slide-wrap .custom-control li');
 //console.log(cControl);
 
 const apTexto = document.querySelector('.container.present-content');
-console.log(presImg[0].offsetHeight);
-console.log(presImg[0].offsetHeight/2);
+/* console.log(presImg[0].offsetHeight);
+console.log(presImg[0].offsetHeight/2); */
 
 
 apTexto.style.height = `${presImg[0].offsetHeight}px`;
@@ -53,5 +53,20 @@ function controlCB(index){
 cControl.forEach((item, index) => {
     item.addEventListener('click', ()=>{
         controlCB(index);
+    });
+});
+
+
+//***********Selecao de conteudo *************
+
+const conteudoBtns = document.querySelectorAll('.container.hobbie>.listaBtn li');
+const conteudos = document.querySelectorAll('.selecao>.selecionado');
+
+conteudoBtns.forEach((item, index)=>{
+    item.addEventListener('click', ()=>{
+        conteudos.forEach((item)=>{
+            item.classList.remove('active');
+        });
+        conteudos[index].classList.add('active');
     });
 });
