@@ -15,6 +15,7 @@ export default class SelectContents{
                 });
                 this.conteudos[index].classList.add('active');
                 this.conteudoBtns[index].classList.add('active');
+                this.conteudos[index].scrollIntoView({behavior: 'smooth', block: 'start',})
             });
         });
     }
