@@ -9,10 +9,12 @@ export default class SelectContents{
     init(){
         this.conteudoBtns.forEach((item, index)=>{
             item.addEventListener('click', ()=>{
-                this.conteudos.forEach((item)=>{
+                this.conteudos.forEach((item, index2)=>{
                     item.classList.remove('active');
+                    this.conteudoBtns[index2].classList.remove('active');
                 });
                 this.conteudos[index].classList.add('active');
+                this.conteudoBtns[index].classList.add('active');
             });
         });
     }
