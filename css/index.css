@@ -79,17 +79,6 @@ div{
     animation: navColorPB 0.3s forwards;
 }
 
-
-/* @keyframes navColorBP{
-    from {
-        color: white;
-    }
-    to {
-        color: black;
-
-    }
-} */
-
 @keyframes navColorPB{
     from {
         color: black;
@@ -385,4 +374,164 @@ div{
 
 .selecao>.selecionado .botoes div:hover{
     animation: borderColorA 0.4s forwards; 
+}
+
+/* ********************************Quebra e rodape*********************************/
+
+.quebra{
+    border-top: black solid 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/deBoas.jpg') no-repeat center;
+    width: 100%;
+    height: 220px;
+}
+
+.quebra>.container{
+    color: white;
+    font-family: georgia;
+    font-size: 1.5em;
+    line-height: 1.43em;
+    font-style: italic;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.quebra>.container>p{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.quebra>.container>p::before{
+    content: "";
+    background: white;
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 10px auto;
+}
+
+.quebra>.container>p::after{
+    content: "";
+    background: white;
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 10px auto 15px auto;
+}
+
+.rodape>.info-finais{
+    background: black;
+    color:#FEC63E;
+}
+
+.rodape>.info-finais>.container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rodape>.info-finais>.container>.rotina{
+    max-width: 314px;
+}
+
+.rodape>.info-finais>.container>.rotina>h3{
+    font-size: 1.5em;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.rodape>.info-finais>.container>.rotina>h3::after{
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FEC63E;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.rodape>.info-finais>.container>.rotina>p{
+    color: white;
+    font-size: 1em;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.rodape>.info-finais>.container>.rotina>cite{
+    display:block;
+    text-align: right;
+    color: white;
+}
+
+.rodape>.info-finais>.container>.contato>h3{
+    font-size: 1.5em;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.rodape>.info-finais>.container>.contato>h3::after{
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FEC63E;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.rodape>.info-finais>.container>.contato>ul{
+    color: white;
+    font-family: 'Patrick Hand SC', cursive;
+    list-style: disc;
+}
+
+.rodape>.info-finais>.container>.contato>ul>li{
+    margin-bottom: 5px;
+}
+
+.rodape>.info-finais>.container>.redes>h3{
+    font-size: 1.5em;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+.rodape>.info-finais>.container>.redes>h3::after{
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FEC63E;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.rodape>.info-finais>.container>.redes>ul{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.rodape>.info-finais>.container>.redes>ul>li a{
+    display: block;
+    padding: 8px;
+    border: #FEC63E solid 3px;
+    animation: borderColorWA 0.4S forwards;
+}
+
+.rodape>.info-finais>.container>.redes>ul>li a:hover{
+    animation: borderColorW 0.4S forwards;
+}
+
+@keyframes borderColorW{
+    from {
+        border-color: #FEC63E;
+    }
+    to {
+        border-color: white;
+    }
+}
+
+@keyframes borderColorWA{
+    from {
+        border-color:white;
+    }
+    to {
+        border-color: #FEC63E;
+    }
 }
