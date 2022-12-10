@@ -1,6 +1,20 @@
-//Ficar mudando a imagem de apresentacao do site**************
+'use strict' //impedir bad actions
 
-const onResize = function(){
+import PresentSlides from "./modules/PresentSlides.js";
+import SelectContent from "./modules/SelectContent.js";
+
+//Ficar mudando a imagem de apresentacao do site
+const presentSlides = new PresentSlides();
+presentSlides.init();
+
+//selecao de conteudo
+const selectContent = new SelectContent();
+selectContent.init();
+
+
+//codigo antes de eu mudar para modulos:
+
+/* const onResize = function(){
     apTexto.style.height = `${presImg[0].offsetHeight}px`;
     apTexto.style.padding = `${presImg[0].offsetHeight/2}px 0 0 0`;
 }
@@ -11,9 +25,9 @@ const presImg = document.querySelectorAll('.slide-wrap .imagens li');
 const cControl = document.querySelectorAll('.slide-wrap .custom-control li');
 //console.log(cControl);
 
-const apTexto = document.querySelector('.container.present-content');
-/* console.log(presImg[0].offsetHeight);
-console.log(presImg[0].offsetHeight/2); */
+const apTexto = document.querySelector('.container.present-content'); 
+//console.log(presImg[0].offsetHeight);
+//console.log(presImg[0].offsetHeight/2); 
 
 
 apTexto.style.height = `${presImg[0].offsetHeight}px`;
@@ -55,11 +69,11 @@ cControl.forEach((item, index) => {
         controlCB(index);
     });
 });
-
+*/
 
 //***********Selecao de conteudo *************
 
-const conteudoBtns = document.querySelectorAll('.container.hobbie>.listaBtn li');
+/* const conteudoBtns = document.querySelectorAll('.container.hobbie>.listaBtn li');
 const conteudos = document.querySelectorAll('.selecao>.selecionado');
 
 conteudoBtns.forEach((item, index)=>{
@@ -69,4 +83,4 @@ conteudoBtns.forEach((item, index)=>{
         });
         conteudos[index].classList.add('active');
     });
-});
+}); */
