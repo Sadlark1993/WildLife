@@ -3,6 +3,7 @@
 import PresentSlides from './modules/PresentSlides.js';
 import SelectContent from './modules/SelectContent.js';
 import Modal from './modules/Modal.js';
+import Cadastrar from './modules/Cadastrar.js';
 
 //Ficar mudando a imagem de apresentacao do site
 const presentSlides = new PresentSlides();
@@ -17,6 +18,9 @@ modalLogin.init();
 
 const modalCadastro = new Modal('.cadastro-btn', '.modal-cadastro .container-modal #fecharCadastro', '.modal-cadastro');
 modalCadastro.init();
+
+const cadastrar = new Cadastrar();
+cadastrar.init();
 
 //codigo antes de eu mudar para modulos:
 
