@@ -1,11 +1,11 @@
 /* reset------------------ */
-ul{
-    list-style: none;
+ul {
+	list-style: none;
 }
 
-img{
-    display:block;
-    max-width: 100%;
+img {
+	display: block;
+	max-width: 100%;
 }
 
 body,
@@ -17,106 +17,98 @@ ul,
 li {
 	padding: 0px;
 	margin: 0px;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+	text-decoration: none;
+	color: black;
 }
 
-div{
-    box-sizing: border-box;
+div {
+	box-sizing: border-box;
 }
-
 
 /* resetEnd ------------------- */
 
-
 /* Header--- */
-.menu{
-    height: 80px;
-    background: #FEC63E;
-    display: flex;
-    justify-content: space-between;
+.menu {
+	height: 80px;
+	background: #fec63e;
+	display: flex;
+	justify-content: space-between;
 }
 
-.menu>.logo img{
-    width: 56px;
-    height: 45px;
+.menu > .logo img {
+	width: 56px;
+	height: 45px;
 }
 
-.menu>.logo a{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 35px;
-    font-family: 'Gochi Hand', cursive, 'Times New Roman', Times, serif;
-    font-size: 2.14em;
+.menu > .logo a {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-left: 35px;
+	font-family: "Gochi Hand", cursive, "Times New Roman", Times, serif;
+	font-size: 2.14em;
 }
 
-
-
-.menu nav{
-    display: flex;
-    align-items: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: bold;
-    font-size: 1.14em;
-    margin-right: 20px;
+.menu nav {
+	display: flex;
+	align-items: center;
+	font-family: "IBM Plex Mono", monospace;
+	font-weight: bold;
+	font-size: 1.14em;
+	margin-right: 20px;
 }
 
-.menu nav ul{
-    display: flex;
+.menu nav ul {
+	display: flex;
 }
 
-.menu nav ul li a{
-    padding: 10px;
-    color: black;
+.menu nav ul li a {
+	padding: 10px;
+	color: black;
 }
 
-.menu nav ul li a:hover{
-    animation: navColorPB 0.3s forwards;
+.menu nav ul li a:hover {
+	animation: navColorPB 0.3s forwards;
 }
 
-@keyframes navColorPB{
-    from {
-        color: black;
-
-    }
-    to {
-        color: white;
-
-    }
+@keyframes navColorPB {
+	from {
+		color: black;
+	}
+	to {
+		color: white;
+	}
 }
 
-.menu nav ul li a{
-    display: flex;
+.menu nav ul li a {
+	display: flex;
 }
-
 
 /* Apresentacao */
 
-.slide-wrap{
-    overflow: hidden;
+.slide-wrap {
+	overflow: hidden;
 }
 
-
-.slide-wrap>.imagens li{
-    width:100%;
-    flex-shrink: 0;
-    animation: fade 0.5s forwards;
-    display: flex;
-    align-items: center;
-    position:absolute;
-    z-index: -2;
-    background-size: cover;
-    max-height: 940px;
-    overflow: hidden;
+.slide-wrap > .imagens li {
+	width: 100%;
+	flex-shrink: 0;
+	animation: fade 0.5s forwards;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: -2;
+	background-size: cover;
+	max-height: 940px;
+	overflow: hidden;
 }
 
-.slide-wrap .imagens li img{
-    width: 100%;
+.slide-wrap .imagens li img {
+	width: 100%;
 }
 
 /* .slide-wrap>.imagens li:last-child{
@@ -125,525 +117,540 @@ div{
     float:left;
 }
  */
-.slide-wrap>.imagens::after, .slide-wrap>.imagens::before{
-    content: '';
-    display: table;
-    clear: both;
-} 
-
-.slide-wrap>.imagens li.active{
-    display: flex;
-    animation: appear 0.5s forwards;
+.slide-wrap > .imagens::after,
+.slide-wrap > .imagens::before {
+	content: "";
+	display: table;
+	clear: both;
 }
 
-.container{
-    width: 940px;
-    margin: 0 auto;
-    padding: 0px;
-    max-width: 100%;
+.slide-wrap > .imagens li.active {
+	display: flex;
+	animation: appear 0.5s forwards;
 }
 
-.container.present-content{
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-} 
-
-.apresentacao .texto{
-    position: relative;
-    z-index: 10;
-/*     top: -360px */;
-    color: white;
-    font-family: 'Patrick Hand SC', cursive;
-    margin-left: 10px;
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0px;
+	max-width: 100%;
 }
 
-.apresentacao .texto h1{
-    font-size: 5.5em;
-    text-shadow: 2px 2px black;
+.container.present-content {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.apresentacao span{
-    font-size: 1.5em;
-    margin-left: 140px;
-    text-shadow: 2px 2px black;
+.apresentacao .texto {
+	position: relative;
+	z-index: 10;
+	/*     top: -360px */
+	color: white;
+	font-family: "Patrick Hand SC", cursive;
+	margin-left: 10px;
 }
 
-.apresentacao .custom-control{
-    display: flex;
-    width: 140px;
-    justify-content: space-around;
-    cursor:pointer;
-    height: 30px;
-    align-self: center;
+.apresentacao .texto h1 {
+	font-size: 5.5em;
+	text-shadow: 2px 2px black;
 }
 
-.apresentacao .custom-control>li{
-    display: block;
-    content: "";
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #FEC63E;
-    opacity: 0.6;
-    transform: scale(0.8);
-    transition: 0.3s;
+.apresentacao span {
+	font-size: 1.5em;
+	margin-left: 140px;
+	text-shadow: 2px 2px black;
 }
 
-.apresentacao .custom-control>li.active,
-.apresentacao .custom-control>li:hover
-{
-    opacity: 1;
-    transform: scale(1);
+.apresentacao .custom-control {
+	display: flex;
+	width: 140px;
+	justify-content: space-around;
+	cursor: pointer;
+	height: 30px;
+	align-self: center;
 }
 
-@keyframes appear{
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.apresentacao .custom-control > li {
+	display: block;
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #fec63e;
+	opacity: 0.6;
+	transform: scale(0.8);
+	transition: 0.3s;
 }
 
-@keyframes fade{
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+.apresentacao .custom-control > li.active,
+.apresentacao .custom-control > li:hover {
+	opacity: 1;
+	transform: scale(1);
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
 
 /* ************Selecao de Conteudo******************* */
 
-.hobbie h1{
-    margin-top: 60px;
-    text-align: center;
-    font-family: 'Patrick Hand SC', cursive;
-    font-size: 2.5em;
+.hobbie h1 {
+	margin-top: 60px;
+	text-align: center;
+	font-family: "Patrick Hand SC", cursive;
+	font-size: 2.5em;
 }
 
-.hobbie h1::after{
-    display: block;
-    content: "";
-    width: 60px;
-    height: 3px;
-    background-color: black;
-    margin: 10px auto;
+.hobbie h1::after {
+	display: block;
+	content: "";
+	width: 60px;
+	height: 3px;
+	background-color: black;
+	margin: 10px auto;
 }
 
-.listaBtn{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+.listaBtn {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
 }
 
-.listaBtn>li{
-    box-sizing: border-box;
-    /* border: 5px solid black; */
-    max-width: 210px;
-    overflow: hidden;
-    cursor: pointer;
-    animation: borderColorB 0.4s forwards;
-    border-width: 5px;
-    border-style: solid;
+.listaBtn > li {
+	box-sizing: border-box;
+	/* border: 5px solid black; */
+	max-width: 210px;
+	overflow: hidden;
+	cursor: pointer;
+	animation: borderColorB 0.4s forwards;
+	border-width: 5px;
+	border-style: solid;
 }
 
-.listaBtn>li.active{
-    border-color: #FEC63E;
-    animation: none !important;
+.listaBtn > li.active {
+	border-color: #fec63e;
+	animation: none !important;
 }
 
-.listaBtn>li:hover{
-    animation: borderColorA 0.4s forwards; 
+.listaBtn > li:hover {
+	animation: borderColorA 0.4s forwards;
 }
 
-@keyframes borderColorB{
-    from {
-        border-color: #FEC63E;
-    }
-    to {
-        border-color: black;
-
-    }
+@keyframes borderColorB {
+	from {
+		border-color: #fec63e;
+	}
+	to {
+		border-color: black;
+	}
 }
 
-@keyframes borderColorA{
-    from {
-        border-color: black;
-
-    }
-    to {
-        border-color: #FEC63E;
-
-    }
+@keyframes borderColorA {
+	from {
+		border-color: black;
+	}
+	to {
+		border-color: #fec63e;
+	}
 }
 
-.selecao{
-    margin-top: 60px;
+.selecao {
+	margin-top: 60px;
 }
 
-
-
-.selecao>.selecionado{
-    display: none;
-} 
-
-.selecao>.selecionado h1{
-    text-align: center;
-    font-family: 'Patrick Hand SC', cursive;
-    font-size: 2.57em;
-    margin-bottom: 10px;
+.selecao > .selecionado {
+	display: none;
 }
 
-.selecao>.selecionado h1::before{
-    content: " ";
-    background: url("../img/campfire-svgrepo-com.svg");
-    display: inline-block;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    position: relative;
-    top: 5px;
+.selecao > .selecionado h1 {
+	text-align: center;
+	font-family: "Patrick Hand SC", cursive;
+	font-size: 2.57em;
+	margin-bottom: 10px;
 }
 
-.selecao>.selecionado h1::after{
-    content: " ";
-    background: url("../img/campfire-svgrepo-com.svg");
-    display: inline-block;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-    position: relative;
-    top: 5px;
+.selecao > .selecionado h1::before {
+	content: " ";
+	background: url("../img/campfire-svgrepo-com.svg");
+	display: inline-block;
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+	position: relative;
+	top: 5px;
 }
 
-.selecao>.selecionado .separador{
-    display: block;
-    background: black;
-    width: 60px;
-    height: 3px;
-    margin: 10px auto 60px auto;
-
+.selecao > .selecionado h1::after {
+	content: " ";
+	background: url("../img/campfire-svgrepo-com.svg");
+	display: inline-block;
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	position: relative;
+	top: 5px;
 }
 
-.selecao>.selecionado .corpo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.selecao > .selecionado .separador {
+	display: block;
+	background: black;
+	width: 60px;
+	height: 3px;
+	margin: 10px auto 60px auto;
 }
 
-.selecao>.selecionado .corpo .texto{
-    flex-grow: 1;
-    flex-shrink: 1;
-    max-width: 460px;
-    font-size: 1.5em;
-    font-family: 'Patrick Hand SC', cursive;
+.selecao > .selecionado .corpo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.selecao>.selecionado .corpo .imagem{
-    flex-grow: 1;
-    max-width: 420px;
-    flex-shrink: 1;
+.selecao > .selecionado .corpo .texto {
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-width: 460px;
+	font-size: 1.5em;
+	font-family: "Patrick Hand SC", cursive;
 }
 
-.selecao>.selecionado.active{
-    display: block;
+.selecao > .selecionado .corpo .imagem {
+	flex-grow: 1;
+	max-width: 420px;
+	flex-shrink: 1;
 }
 
-.selecao>.selecionado .botoes{
-    margin-top: 60px;
-    margin-bottom: 60px;
-    display:flex;
-    justify-content: space-around;
+.selecao > .selecionado.active {
+	display: block;
 }
 
-.selecao>.selecionado .botoes div{
-    height: 40px;
-    width: 95px;
-    border-width: 3px;
-    border-style: solid;
-    text-align: center;
-    padding-top:4px;
-    font-family: 'Patrick Hand SC', cursive;
-    font-size: 18px;
-    cursor: pointer;
-    animation: borderColorB 0.4s forwards;
+.selecao > .selecionado .botoes {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	display: flex;
+	justify-content: space-around;
 }
 
-.selecao>.selecionado .botoes div:hover{
-    animation: borderColorA 0.4s forwards; 
+.selecao > .selecionado .botoes div {
+	height: 40px;
+	width: 95px;
+	border-width: 3px;
+	border-style: solid;
+	text-align: center;
+	padding-top: 4px;
+	font-family: "Patrick Hand SC", cursive;
+	font-size: 18px;
+	cursor: pointer;
+	animation: borderColorB 0.4s forwards;
+}
+
+.selecao > .selecionado .botoes div:hover {
+	animation: borderColorA 0.4s forwards;
 }
 
 /* ********************************Quebra e rodape*********************************/
 
-.quebra{
-    border-top: black solid 5px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/deBoas.jpg') no-repeat center;
-    width: 100%;
-    height: 220px;
+.quebra {
+	border-top: black solid 5px;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("../img/deBoas.jpg") no-repeat center;
+	width: 100%;
+	height: 220px;
 }
 
-.quebra>.container{
-    color: white;
-    font-family: georgia;
-    font-size: 1.5em;
-    line-height: 1.43em;
-    font-style: italic;
-    text-align: center;
-    padding-top: 20px;
+.quebra > .container {
+	color: white;
+	font-family: georgia;
+	font-size: 1.5em;
+	line-height: 1.43em;
+	font-style: italic;
+	text-align: center;
+	padding-top: 20px;
 }
 
-.quebra>.container>p{
-    max-width: 500px;
-    margin: 0 auto;
+.quebra > .container > p {
+	max-width: 500px;
+	margin: 0 auto;
 }
 
-.quebra>.container>p::before{
-    content: "";
-    background: white;
-    display: block;
-    width: 60px;
-    height: 3px;
-    margin: 0 auto 10px auto;
+.quebra > .container > p::before {
+	content: "";
+	background: white;
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 0 auto 10px auto;
 }
 
-.quebra>.container>p::after{
-    content: "";
-    background: white;
-    display: block;
-    width: 60px;
-    height: 3px;
-    margin: 10px auto 15px auto;
+.quebra > .container > p::after {
+	content: "";
+	background: white;
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 10px auto 15px auto;
 }
 
-.rodape>.info-finais{
-    background: black;
-    color:#FEC63E;
+.rodape > .info-finais {
+	background: black;
+	color: #fec63e;
 }
 
-.rodape>.info-finais>.container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.rodape > .info-finais > .container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-.rodape>.info-finais>.container>.rotina{
-    max-width: 314px;
+.rodape > .info-finais > .container > .rotina {
+	max-width: 314px;
 }
 
-.rodape>.info-finais>.container>.rotina>h3{
-    font-size: 1.5em;
-    font-family: 'Patrick Hand SC', cursive;
+.rodape > .info-finais > .container > .rotina > h3 {
+	font-size: 1.5em;
+	font-family: "Patrick Hand SC", cursive;
 }
 
-.rodape>.info-finais>.container>.rotina>h3::after{
-    content:"";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #FEC63E;
-    margin-top: 10px;
-    margin-bottom: 15px;
+.rodape > .info-finais > .container > .rotina > h3::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #fec63e;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
-.rodape>.info-finais>.container>.rotina>p{
-    color: white;
-    font-size: 1em;
-    font-family: 'Patrick Hand SC', cursive;
+.rodape > .info-finais > .container > .rotina > p {
+	color: white;
+	font-size: 1em;
+	font-family: "Patrick Hand SC", cursive;
 }
 
-.rodape>.info-finais>.container>.rotina>cite{
-    display:block;
-    text-align: right;
-    color: white;
+.rodape > .info-finais > .container > .rotina > cite {
+	display: block;
+	text-align: right;
+	color: white;
 }
 
-.rodape>.info-finais>.container>.contato>h3{
-    font-size: 1.5em;
-    font-family: 'Patrick Hand SC', cursive;
+.rodape > .info-finais > .container > .contato > h3 {
+	font-size: 1.5em;
+	font-family: "Patrick Hand SC", cursive;
 }
 
-.rodape>.info-finais>.container>.contato>h3::after{
-    content:"";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #FEC63E;
-    margin-top: 10px;
-    margin-bottom: 15px;
+.rodape > .info-finais > .container > .contato > h3::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #fec63e;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
-.rodape>.info-finais>.container>.contato>ul{
-    color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+.rodape > .info-finais > .container > .contato > ul {
+	color: white;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.rodape>.info-finais>.container>.contato>ul>li{
-    margin-bottom: 8px;
+.rodape > .info-finais > .container > .contato > ul > li {
+	margin-bottom: 8px;
 }
 
-.rodape>.info-finais>.container>.redes>h3{
-    font-size: 1.5em;
-    font-family: 'Patrick Hand SC', cursive;
+.rodape > .info-finais > .container > .redes > h3 {
+	font-size: 1.5em;
+	font-family: "Patrick Hand SC", cursive;
 }
 
-.rodape>.info-finais>.container>.redes>h3::after{
-    content:"";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #FEC63E;
-    margin-top: 10px;
-    margin-bottom: 15px;
+.rodape > .info-finais > .container > .redes > h3::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #fec63e;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
-.rodape>.info-finais>.container>.redes>ul{
-    display: flex;
-    justify-content: space-between;
-    column-gap: 10px;
+.rodape > .info-finais > .container > .redes > ul {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 10px;
 }
 
-.rodape>.info-finais>.container>.redes>ul>li a{
-    display: block;
-    padding: 8px;
-    border: #FEC63E solid 3px;
-    animation: borderColorWA 0.4S forwards;
+.rodape > .info-finais > .container > .redes > ul > li a {
+	display: block;
+	padding: 8px;
+	border: #fec63e solid 3px;
+	animation: borderColorWA 0.4s forwards;
 }
 
-.rodape>.info-finais>.container>.redes>ul>li a:hover{
-    animation: borderColorW 0.4S forwards;
+.rodape > .info-finais > .container > .redes > ul > li a:hover {
+	animation: borderColorW 0.4s forwards;
 }
 
-@keyframes borderColorW{
-    from {
-        border-color: #FEC63E;
-    }
-    to {
-        border-color: white;
-    }
+@keyframes borderColorW {
+	from {
+		border-color: #fec63e;
+	}
+	to {
+		border-color: white;
+	}
 }
 
-@keyframes borderColorWA{
-    from {
-        border-color:white;
-    }
-    to {
-        border-color: #FEC63E;
-    }
+@keyframes borderColorWA {
+	from {
+		border-color: white;
+	}
+	to {
+		border-color: #fec63e;
+	}
 }
 
 /* ***********************Modal-Login******************************* */
 
-.modal-login{
-    position:fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    height: 100vh; /* 100% da tela */
-    width: 100%;
-    z-index: 1000;
-    display: none; /* <----------- */
-    justify-content: center;
-    align-items: center;
+.modal-login,
+.modal-cadastro {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	height: 100vh; /* 100% da tela */
+	width: 100%;
+	z-index: 1000;
+	display: none; /* <----------- */
+	justify-content: center;
+	align-items: center;
 }
 
-.modal-login.active{
-    display: flex;
+.modal-login.active,
+.modal-cadastro.active {
+	display: flex;
 }
 
-.modal-login .container-modal{
-    border: black solid 5px;
-    background: white;
-    position: relative
+/* .modal-login */
+.container-modal {
+	border: black solid 5px;
+	background: white;
+	position: relative;
 }
 
-.modal-login .container-modal #fechar{
-    padding: 0;
-    /* background: white; */
-    border: none;
-    border-radius: 5px;
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    overflow: hidden;
-    max-width: 20px;
-    max-height: 20px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.modal-login .container-modal #fechar,
+.container-modal #fecharCadastro {
+	padding: 0;
+	/* background: white; */
+	border: none;
+	border-radius: 5px;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	overflow: hidden;
+	max-width: 20px;
+	max-height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 }
 
-.modal-login .container-modal #fechar img{
-    width: 25px;
-    height: 25px;
-    margin: 0;
-    border:none;
+.modal-login .container-modal #fechar img,
+.container-modal #fecharCadastro img {
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	border: none;
 }
 
-.modal-login .container-modal form{
-    padding: 20px;
-    display: block;
-    flex-wrap: wrap;
-    font-family: 'Patrick Hand SC', cursive;
-    
+/* .modal-login >  */
+.container-modal > h3 {
+	font-family: "Patrick Hand SC", cursive;
+	font-size: 2em;
+	margin: 10px 0 -20px 20px;
 }
 
-.modal-login .container-modal form label{
-    display: block;
-    font-size: 1.2em;
+/* .modal-login */
+.container-modal form {
+	padding: 20px;
+	display: block;
+	flex-wrap: wrap;
+	font-family: "Patrick Hand SC", cursive;
+}
+
+/* .modal-login */
+.container-modal form label {
+	display: block;
+	font-size: 1.2em;
 }
 
 /* .modal-login .container-modal form input:focus{
     outline-color: gray;
 } */
 
-
-
-.modal-login .container-modal form input{
-    margin-bottom: 10px;
-    font-family: 'Patrick Hand SC', cursive;
-    font-size: 1em;
-    border-radius: 5px;
-    border: black 2px solid;
+/* .modal-login  */
+.container-modal form input {
+	margin-bottom: 10px;
+	font-family: "Patrick Hand SC", cursive;
+	font-size: 1em;
+	border-radius: 5px;
+	border: black 2px solid;
 }
 
-.modal-login .container-modal form .botoes{
-    display: flex;
-    justify-content: space-between;
+.modal-login .container-modal form .botoes {
+	display: flex;
+	justify-content: space-between;
 }
 
-.modal-login .container-modal form .botoes button{
-    border: black 2px solid;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Patrick Hand SC', cursive;
+/* .modal-login */
+.container-modal form /* .botoes */ button {
+	border: black 2px solid;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Patrick Hand SC", cursive;
 }
 
-.modal-login .container-modal form .botoes button:hover{
-    border-color: gray;
+/* .modal-login */
+.container-modal form /* .botoes */ button:hover {
+	border-color: gray;
 }
 
-
-.modal-login.active .container-modal{
-    animation: modal 0.4s forwards;
+.modal-login.active .container-modal,
+.modal-cadastro.active .container-modal {
+	animation: modal 0.4s forwards;
 }
 
-@keyframes modal{
-    from{
-        opacity: 0;
-        transform: translate3d(0, -30px, 0);
-    }
-    to{
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+@keyframes modal {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -30px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
 
-    }
+/* *************************** modal-cadastro************************* */
+
+.modal-cadastro > .container-modal > form > button {
+	display: block;
+	margin-top: 10px;
 }

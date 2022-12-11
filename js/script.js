@@ -15,6 +15,9 @@ selectContent.init();
 const modalLogin = new Modal('.login-btn', '.modal-login .container-modal #fechar', '.modal-login');
 modalLogin.init();
 
+const modalCadastro = new Modal('.cadastro-btn', '.modal-cadastro .container-modal #fecharCadastro', '.modal-cadastro');
+modalCadastro.init();
+
 //codigo antes de eu mudar para modulos:
 
 /* const onResize = function(){
