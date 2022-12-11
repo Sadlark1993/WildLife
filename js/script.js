@@ -1,7 +1,8 @@
 'use strict' //impedir bad actions
 
-import PresentSlides from "./modules/PresentSlides.js";
-import SelectContent from "./modules/SelectContent.js";
+import PresentSlides from './modules/PresentSlides.js';
+import SelectContent from './modules/SelectContent.js';
+import Modal from './modules/Modal.js';
 
 //Ficar mudando a imagem de apresentacao do site
 const presentSlides = new PresentSlides();
@@ -11,6 +12,8 @@ presentSlides.init();
 const selectContent = new SelectContent();
 selectContent.init();
 
+const modalLogin = new Modal('.login-btn', '.modal-login .container-modal #fechar', '.modal-login');
+modalLogin.init();
 
 //codigo antes de eu mudar para modulos:
 
