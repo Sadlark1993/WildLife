@@ -65,24 +65,25 @@ export default class Cadastrar{
     //console.log(this.cadastro);
 
     let problem = 0;
-    if(!this.cadastro.usuario.match(/^[A-Za-z][A-Za-z0-9_]*$/)){
-      problem = 1;
-      console.log('usuario invalido');
+
+    if(this.cadastro.senha !== document.forms.formCadastro.newPassConf.value){
+      problem = 4;
+      console.log('as senhas nao coincidem');
+    }
+
+    if(!this.cadastro.senha || this.cadastro.senha.length<6){
+      problem = 3;
+      console.log('senha invalida');
     }
 
     if(!this.cadastro.email.match(/[\w.-]+@[\w-]+\.[\w-.]+/gi)){
       problem = 2;
       console.log('email invalido');
     }
-    
-    if(!this.cadastro.senha || this.cadastro.senha.length<6){
-      problem = 3;
-      console.log('senha invalida');
-    }
 
-    if(this.cadastro.senha !== document.forms.formCadastro.newPassConf.value){
-      problem = 4;
-      console.log('as senhas nao coincidem');
+    if(!this.cadastro.usuario.match(/^[A-Za-z][A-Za-z0-9_]*$/)){
+      problem = 1;
+      console.log('usuario invalido');
     }
 
     if(localStorage.getItem(this.cadastro.usuario)){

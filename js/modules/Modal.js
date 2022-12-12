@@ -44,9 +44,6 @@ export default class Modal{
         this.fechar.addEventListener('click', this.toggleModal);
         this.modal.addEventListener('click', this.outsideClick);
         
-        this.login.addEventListener('click', ()=>{
-            document.location.reload(true);
-        });
         window.addEventListener('keydown', this.keyboardEvent);
     }
 }

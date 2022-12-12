@@ -35,9 +35,9 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#">Tutoriais</a></li>
-						<li><a href="#">Momentos</a></li>
-						<li><a href="#">Sobre</a></li>
+						<li><a class="obras" href="#">Tutoriais</a></li>
+						<li><a class="obras" href="#">Momentos</a></li>
+						<li><a class="obras" href="#">Sobre</a></li>
 						<li><a class="login-btn" href="#">Login</a></li>
 					</ul>
 				</nav>
@@ -110,7 +110,7 @@
 					</div>
 				</div>
 				<div class="botoes">
-					<div>Tutoriais</div>
+					<div class="obras">Tutoriais</div>
 					<div class="cadastro-btn">Cadastrar</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 					</div>
 				</div>
 				<div class="botoes">
-					<div>Eventos</div>
+					<div class="obras">Eventos</div>
 					<div class="cadastro-btn">Cadastrar</div>
 				</div>
 			</div>
@@ -164,7 +164,7 @@
 					</div>
 				</div>
 				<div class="botoes">
-					<div>Loja</div>
+					<div class="obras">Loja</div>
 					<div class="cadastro-btn">Cadastrar</div>
 				</div>
 			</div>
@@ -192,7 +192,7 @@
 					</div>
 				</div>
 				<div class="botoes">
-					<div>Contratar</div>
+					<div class="obras">Contratar</div>
 					<div class="cadastro-btn">Cadastrar</div>
 				</div>
 			</div>
@@ -255,11 +255,12 @@
 					<img src="./img/close-button-svgrepo-com.svg" alt="" />
 				</button>
 				<h3>Login</h3>
-				<form action="">
+				<form name="formLogin" action="">
 					<label for="user">usuário</label>
-					<input type="text" for="user" id="user" />
+					<input type="text" for="user" name="user" id="user" />
 					<label for="pass">senha</label>
-					<input type="password" for="pass" id="pass" />
+					<input type="password" for="pass" name="pass" id="pass" />
+					<p class="msgErro"></p>
 					<div class="botoes">
 						<button id="entrarBtn" type="submit">Entrar</button>
 						<button class="cadastro-btn" id="cadastrarBtn" type="submit">
@@ -272,7 +273,7 @@
 
 		<section class="modal-cadastro">
 			<div class="container-modal">
-				<button id="fecharCadastro">
+				<button id="fecharModal">
 					<img src="./img/close-button-svgrepo-com.svg" alt="" />
 				</button>
 				<h3>Cadastro</h3>
@@ -295,6 +296,49 @@
 				</form>
 			</div>
 		</section>
+
+		<section class="modal-user">
+			<div class="container-modal">
+				<button id="fecharModal">
+					<img src="./img/close-button-svgrepo-com.svg" alt="" />
+				</button>
+				<h3>Dados do Usuário</h3>
+				<div class="userData">
+					<p class="usuario title">usuário:</p>
+					<p class="usuario response"></p>
+					<p class="email title">e-mail:</p>
+					<p class="email response"></p>
+				</div>
+				<div class="botoes">
+					<button class="deslogarUsuario">sair</button>
+					<button class="excluirConta">excluir conta</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="modal-construcao">
+			<div class="container-modal">
+				<button id="fecharModal">
+					<img src="./img/close-button-svgrepo-com.svg" alt="" />
+				</button>
+				<h3>Em Obras...</h3>
+				<div class="userData">
+					<img src="./img/emObras.svg" alt="em obras" />
+					<p>
+						No momento, apenas os botões de login e cadastro estão funcionando.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<p>Este site é fictício, seu propósito é didático.</p>
+				<a target="_blank" href="https://github.com/Sadlark1993/WildLife"
+					>&nbsp;Autor.</a
+				>
+			</div>
+		</footer>
 
 		<!-- a mensagem sera inserida via JavaScript -->
 		<div class="message"><p></p></div>
