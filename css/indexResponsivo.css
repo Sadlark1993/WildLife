@@ -1,0 +1,185 @@
+header ul.menu-list {
+	position: absolute;
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	bottom: -80px;
+	left: 20px;
+	display: none;
+	z-index: 100;
+}
+
+@media (max-width: 740px) {
+	.container {
+		max-width: 300px;
+	}
+
+	header {
+		background: #fec63e;
+		position: relative;
+	}
+
+	.menu {
+		margin: 0 20px 0 20px;
+	}
+
+	.menu .menu-mobile {
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: #fec63e;
+		border: none;
+	}
+
+	.menu .menu-mobile::before {
+		content: "";
+		height: 2px;
+		width: 14px;
+		background: black;
+		z-index: 100;
+		display: inline-block;
+		position: relative;
+		top: -5px;
+		box-shadow: 0 4px black, 0 -4px black;
+		transition: transform 0.4s;
+	}
+
+	.menu .menu-mobile.active::before {
+		transform: rotate(90deg);
+	}
+
+	.menu .logo {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header ul.menu-list.active {
+		display: block;
+		animation: dropDown 0.4s forwards;
+	}
+
+	@keyframes dropDown {
+		from {
+			opacity: 0;
+			transform: translate3d(0, -30px, 0);
+		}
+		to {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	header ul.menu-list li {
+		padding: 0 5px 0 5px;
+	}
+
+	header ul.menu-list li a.obras {
+		font-size: 1.14em;
+		font-family: "IBM Plex Mono", monospace;
+		font-weight: bold;
+		color: white;
+		padding: 5px;
+		display: block;
+		border-bottom: solid 2px white;
+	}
+
+	header ul.menu-list li:last-child a.obras {
+		border: none;
+	}
+
+	header .menu .logo img {
+		display: none;
+	}
+
+	.menu .logo a {
+		margin: 0;
+	}
+
+	header nav ul li a.obras {
+		display: none;
+	}
+
+	.apresentacao .slide-wrap .container.present-content {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.apresentacao .slide-wrap .container.present-content h1 {
+		font-size: 3em;
+	}
+
+	.apresentacao .slide-wrap .container.present-content span {
+		margin: 0;
+	}
+
+	.listaBtn {
+		flex-wrap: wrap;
+	}
+
+	.listaBtn > li {
+		max-width: 145px;
+		flex-shrink: 0;
+	}
+
+	.selecao > .selecionado h1 {
+		font-size: 1.5em;
+	}
+
+	.selecao > .selecionado h1::before {
+		width: 25px;
+		height: 25px;
+	}
+
+	.selecao > .selecionado h1::after {
+		width: 25px;
+		height: 25px;
+	}
+
+	.selecao > .selecionado .separador {
+		margin-bottom: 20px;
+	}
+
+	.selecao > .selecionado .corpo {
+		flex-wrap: wrap;
+	}
+
+	.selecao > .selecionado .corpo .texto {
+		width: 300px;
+		text-align: justify;
+		margin-bottom: 20px;
+		font-size: 1em;
+	}
+
+	.selecao > .selecionado .botoes {
+		margin: 25px 0 25px 0;
+	}
+
+	.quebra {
+		background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+			url("../img/deBoas2Resp.png") no-repeat center;
+	}
+
+	.quebra > .container {
+		font-size: 1.2em;
+	}
+
+	.rodape > .info-finais > .container {
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.rodape > .info-finais > .container h3::after {
+		margin: 0 auto;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	footer .container {
+		display: block;
+	}
+}

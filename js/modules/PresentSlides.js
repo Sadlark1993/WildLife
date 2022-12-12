@@ -21,9 +21,17 @@ export default class PresentSlides{
         this.controlCB = this.controlCB.bind(this);
     }
 
+    adjust(){
+
+    }
+
     onResize(){
         this.apTexto.style.height = `${this.presImg[0].offsetHeight}px`;
-        this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
+        if(window.innerWidth>740){
+            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
+        }else{
+            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/5}px 0 0 0`;
+        }
     }
 
     changeImg(){
@@ -51,9 +59,15 @@ export default class PresentSlides{
         this.apInt = setInterval(this.changeImg, 9000);
     }
 
+
     init(){
+        
         this.apTexto.style.height = `${this.presImg[0].offsetHeight}px`;
-        this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
+        if(window.innerWidth>740){
+            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
+        }else{
+            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/5}px 0 0 0`;
+        }
         window.addEventListener('resize', this.onResize);
 
         this.apInt = setInterval(this.changeImg, 9000);

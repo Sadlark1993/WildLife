@@ -6,6 +6,7 @@ import SelectContent from './modules/SelectContent.js';
 import Modal from './modules/Modal.js';
 import Cadastrar from './modules/Cadastrar.js';
 import Login from './modules/Login.js';
+import MenuMobile from './modules/MenuMobile.js';
 
 const preload = new Preload();
 preload.init();
@@ -32,3 +33,6 @@ cadastrar.init();
 
 const login = new Login();
 login.init();
+
+const menuMobile = new MenuMobile();
+menuMobile.init();

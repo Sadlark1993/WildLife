@@ -61,6 +61,10 @@ body.preload * {
 	font-size: 2.14em;
 }
 
+.menu .menu-mobile {
+	display: none;
+}
+
 .menu nav {
 	display: flex;
 	align-items: center;
@@ -96,7 +100,7 @@ body.preload * {
 	display: flex;
 }
 
-/* Apresentacao */
+/* **********************Apresentacao********************* */
 
 .slide-wrap {
 	overflow: hidden;
@@ -239,6 +243,8 @@ body.preload * {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 60px;
+	gap: 10px;
+	justify-content: center;
 }
 
 .listaBtn > li {
@@ -277,6 +283,9 @@ body.preload * {
 	to {
 		border-color: #fec63e;
 	}
+}
+
+.listaBtn > li > img {
 }
 
 .selecao {
@@ -379,7 +388,7 @@ body.preload * {
 .quebra {
 	border-top: black solid 5px;
 	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-		url("../img/deBoas.jpg") no-repeat center;
+		url("../img/deBoas2.png") no-repeat center;
 	width: 100%;
 	height: 220px;
 }
