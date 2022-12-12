@@ -3,26 +3,64 @@
 export default class Cadastrar{
   constructor(){
     this.cadastroBtn = document.querySelector('.modal-cadastro #confCadastro');
+    this.message = document.querySelector('body .message');
+    this.errorMsg = document.querySelector('.modal-cadastro .msgErro');
 
     //bind
     this.handleCadastro = this.handleCadastro.bind(this);
   }
 
   handleProblem(problem){
-    let i = 2; //provisorio
+
+    switch(problem){
+      case 1:
+        this.errorMsg.innerText = 'usuário inválido.';
+        break;
+      case 2:
+        this.errorMsg.innerText = 'email inválido.';
+        break;
+      case 3:
+        this.errorMsg.innerText = 'senha inválida.';
+        break;
+      case 4:
+        this.errorMsg.innerText = 'as senhas não coincidem.';
+        break;
+      case 5:
+        this.errorMsg.innerText = 'nome de usuário já cadastrado.';
+    }
+    
   }
 
   efetuarCadastro(){
+    this.errorMsg.innerText = '';
     localStorage.setItem(this.cadastro.usuario, JSON.stringify(this.cadastro));
+    this.message.innerHTML = '<span>Cadastro efetuado</span>';
+    this.message.classList.add('active');
+
+    //tive que fazer malabarismo pra mensagem sumir suavemente
+    this.message.style.display = 'block';
+    setTimeout(()=>{
+      this.message.classList.remove('active');
+      setTimeout(()=>{
+        this.message.style.display = 'none';
+      },500);
+    },1500);
+
+    document.formCadastro.newUser.value = '';
+    document.formCadastro.newEmail.value = '';
+    document.formCadastro.newPass.value = '';
+    document.formCadastro.newPassConf.value = '';
+
+    document.querySelector('.modal-cadastro').classList.remove('active');
   }
 
   handleCadastro(event){
     event.preventDefault();
     //console.log(document.forms.formCadastro.newUser.value);
     this.cadastro = {
-      usuario: document.forms.formCadastro.newUser.value,
-      email: document.forms.formCadastro.newEmail.value,
-      senha: document.forms.formCadastro.newPass.value,
+      usuario: document.forms.formCadastro.newUser.value.trim(),
+      email: document.forms.formCadastro.newEmail.value.trim(),
+      senha: document.forms.formCadastro.newPass.value.trim(),
     }
     //console.log(this.cadastro);
 

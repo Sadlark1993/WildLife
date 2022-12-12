@@ -24,7 +24,7 @@
 
 		<title>Wild Life</title>
 	</head>
-	<body>
+	<body class="preload">
 		<header>
 			<!-- pronto? -->
 			<div class="menu">
@@ -290,10 +290,14 @@
 						name="newPassConf"
 						id="newPassConf"
 					/>
+					<p class="msgErro"></p>
 					<button id="confCadastro" type="submit">Cadastrar</button>
 				</form>
 			</div>
 		</section>
+
+		<!-- a mensagem sera inserida via JavaScript -->
+		<div class="message"><p></p></div>
 
 		<script type="module" src="./js/script.js"></script>
 	</body>

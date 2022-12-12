@@ -1,9 +1,13 @@
 'use strict' //impedir bad actions
 
+import Preload from './modules/Preload.js';
 import PresentSlides from './modules/PresentSlides.js';
 import SelectContent from './modules/SelectContent.js';
 import Modal from './modules/Modal.js';
 import Cadastrar from './modules/Cadastrar.js';
+
+const preload = new Preload();
+preload.init();
 
 //Ficar mudando a imagem de apresentacao do site
 const presentSlides = new PresentSlides();

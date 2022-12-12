@@ -17,6 +17,9 @@ export default class Modal{
     toggleModal(event){
         event.preventDefault();
         this.modal.classList.toggle('active');
+        document.querySelectorAll('.msgErro').forEach((item)=>{
+            item.innerText = '';
+        })
         window.addEventListener('keydown', this.keyboardEvent); //talvez n esteja da melhor forma
     }
 

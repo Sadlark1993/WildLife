@@ -29,6 +29,14 @@ div {
 	box-sizing: border-box;
 }
 
+/* Evitar que as animacoes ocorram ao carregar a pagina */
+body.preload * {
+	animation-duration: 0s !important;
+	-webkit-animation-duration: 0s !important;
+	transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s,
+		padding 0s, margin 0s !important;
+}
+
 /* resetEnd ------------------- */
 
 /* Header--- */
@@ -536,7 +544,7 @@ div {
 	background: rgba(0, 0, 0, 0.5);
 	height: 100vh; /* 100% da tela */
 	width: 100%;
-	z-index: 1000;
+	z-index: 50;
 	display: none; /* <----------- */
 	justify-content: center;
 	align-items: center;
@@ -648,9 +656,40 @@ div {
 	}
 }
 
-/* *************************** modal-cadastro************************* */
-
 .modal-cadastro > .container-modal > form > button {
 	display: block;
 	margin-top: 10px;
+}
+
+.modal-cadastro .msgErro {
+	color: red;
+	font-size: 0.8em;
+}
+
+body > .message {
+	animation: fade 0.5s forwards;
+	min-width: 100px;
+	min-height: 40px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fec63e;
+	position: fixed;
+	display: none;
+	top: 70vh;
+	left: calc(50vw - 60px);
+	z-index: 51;
+	padding: 10px;
+}
+
+body > .message.active {
+	display: flex;
+	animation: appear 0.5s forwards;
+}
+
+@keyframes fadeNone {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
