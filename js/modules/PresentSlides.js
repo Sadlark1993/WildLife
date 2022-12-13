@@ -70,6 +70,10 @@ export default class PresentSlides{
         }
         window.addEventListener('resize', this.onResize);
 
+        setTimeout(()=>{
+            this.onResize();
+        }, 1500);
+
         this.apInt = setInterval(this.changeImg, 9000);
 
         this.cControl.forEach((item, index) => {
