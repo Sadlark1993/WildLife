@@ -72,6 +72,9 @@ export default class PresentSlides{
 
         setTimeout(()=>{
             this.onResize();
+            setTimeout(()=>{
+                this.onResize();
+            }, 4500);
         }, 1500);
 
         this.apInt = setInterval(this.changeImg, 9000);
