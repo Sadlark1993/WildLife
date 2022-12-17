@@ -194,7 +194,7 @@ body.preload * {
 	background-color: #fec63e;
 	opacity: 0.6;
 	transform: scale(0.8);
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 .apresentacao .custom-control > li.active,
@@ -261,10 +261,12 @@ body.preload * {
 .listaBtn > li.active {
 	border-color: #fec63e;
 	animation: none !important;
+	transition: 0.1s ease-in-out;
 }
 
 .listaBtn > li:hover {
-	animation: borderColorA 0.4s forwards;
+	/* animation: borderColorA 0.4s forwards; */
+	transform: scale(1.05);
 }
 
 @keyframes borderColorB {
