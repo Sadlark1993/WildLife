@@ -30,7 +30,7 @@ export default class PresentSlides{
         if(window.innerWidth>740){
             this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
         }else{
-            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/5}px 0 0 0`;
+            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
         }
     }
 
@@ -66,7 +66,7 @@ export default class PresentSlides{
         if(window.innerWidth>740){
             this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
         }else{
-            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/5}px 0 0 0`;
+            this.apTexto.style.padding = `${this.presImg[0].offsetHeight/2}px 0 0 0`;
         }
         window.addEventListener('resize', this.onResize);
 
